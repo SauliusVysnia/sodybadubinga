@@ -1,0 +1,16 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+
+$sodybadubinga-primary: mat.define-palette(mat.$indigo-palette, 200);
+$sodybadubinga-accent: mat.define-palette(mat.$indigo-palette, 50);
+$sodybadubinga-warn: mat.define-palette(mat.$indigo-palette, red (20, 41, 238));
+$sodybadubinga: mat.define-light-theme($sodybadubinga-primary, $sodybadubinga-accent, $sodybadubinga-warn);
+
+@include mat.all-component-themes($sodybadubinga);
+
+.navtabs-container{
+    background-color: mat.get-color-from-palette($sodybadubinga-accent);
+}
+
