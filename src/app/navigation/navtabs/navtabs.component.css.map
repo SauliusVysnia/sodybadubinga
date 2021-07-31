@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,IAAI,EAAE,UAAU;CACnB",
+    "sources": [
+        "navtabs.component.scss"
+    ],
+    "names": [],
+    "file": "navtabs.component.css"
+}

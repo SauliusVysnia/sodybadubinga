@@ -3,14 +3,104 @@
 @include mat.core();
 
 
-$sodybadubinga-primary: mat.define-palette(mat.$indigo-palette, 200);
-$sodybadubinga-accent: mat.define-palette(mat.$indigo-palette, 50);
-$sodybadubinga-warn: mat.define-palette(mat.$indigo-palette, red (20, 41, 238));
+$thea-primary: (
+    50 : #f0f9f8,
+    100 : #d9efed,
+    200 : #c0e5e2,
+    300 : #a6dbd6,
+    400 : #93d3cd,
+    500 : #80cbc4,
+    600 : #78c6be,
+    700 : #6dbeb6,
+    800 : #63b8af,
+    900 : #50aca2,
+    A100 : #ffffff,
+    A200 : #d9fffb,
+    A400 : #a6fff5,
+    A700 : #8cfff2,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+ )
+);
+
+$thea-accent: (
+    50 : #fffefb,
+    100 : #fffdf6,
+    200 : #fffcf0,
+    300 : #fffaea,
+    400 : #fff9e6,
+    500 : #fff8e1,
+    600 : #fff7dd,
+    700 : #fff6d9,
+    800 : #fff5d5,
+    900 : #fff3cd,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+ )
+);
+
+$sodybadubinga-primary: mat.define-palette($thea-primary, 700, 400, 900);
+$sodybadubinga-accent: mat.define-palette($thea-accent, 500, 400, 700);
+
+$sodybadubinga-warn: mat.define-palette(mat.$red-palette);
+
 $sodybadubinga: mat.define-light-theme($sodybadubinga-primary, $sodybadubinga-accent, $sodybadubinga-warn);
 
+@import '.\app\navigation\navtabs\navtabs.component.css';
 @include mat.all-component-themes($sodybadubinga);
 
+// Itraukiamas Navtabs component scss failas
+//@include navtabs-component-theme ($sodybadubinga);
+
+
+
+
+
+
+// Cia dedami visi theming style
 .navtabs-container{
-    background-color: mat.get-color-from-palette($sodybadubinga-accent);
+    background-color: mat.get-color-from-palette($sodybadubinga-primary, lighter);
+}    
+
+
+// Visas stilius rasomas cia
+.mat-list-option:hover, 
+.mat-list-option:focus, 
+.mat-nav-list .mat-list-item:hover, 
+.mat-nav-list .mat-list-item:focus, 
+.mat-action-list .mat-list-item:hover, 
+.mat-action-list .mat-list-item:focus {
+    background-color: mat.get-color-from-palette($sodybadubinga-primary, 100);
+    color: mat.get-color-from-palette($sodybadubinga-primary, 900);
 }
 

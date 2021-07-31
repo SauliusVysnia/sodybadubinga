@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,YAAY,EAAE,GAAG;CACpB",
+    "sources": [
+        "sidenav-list.component.scss"
+    ],
+    "names": [],
+    "file": "sidenav-list.component.css"
+}

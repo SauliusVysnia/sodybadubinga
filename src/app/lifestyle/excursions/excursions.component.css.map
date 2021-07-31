@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "excursions.component.scss"
+    ],
+    "names": [],
+    "file": "excursions.component.css"
+}

@@ -1,3 +1,13 @@
+@use '~@angular/material' as mat;
+
+
+@mixin navtabs-component-theme ($sodybadubinga) {
+
+    $primary: map-get($sodybadubinga, primary);
+    $accent: map-get($sodybadubinga, $accent);
+}
+
+
 .toolbar-flex{
     flex: 1 0.5 auto;
 }
